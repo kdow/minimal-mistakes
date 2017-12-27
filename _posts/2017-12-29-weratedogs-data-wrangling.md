@@ -1,8 +1,7 @@
 ---
 title: WeRateDogs Data Wrangling Project
-categories:
-- python
-- data wrangling
+category: python
+tags: data-wrangling
 date: 2017-12-29
 ---
 
