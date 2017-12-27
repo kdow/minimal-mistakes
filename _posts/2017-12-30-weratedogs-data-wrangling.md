@@ -4,6 +4,7 @@ category: python
 tags: data-wrangling
 date: 2017-12-30
 layout: single
+author_profile: true
 ---
 
 ## Introduction
