@@ -32,7 +32,7 @@ Udacity also provided a link to image_predictions.tsv which I downloaded program
 
 ## Analysis
 My analysis revolved around the trend in popularity over time of the account, based off of the number of retweets and favorites, and analysis of the rating scores over time. In my analysis, I recognized a trend in the favorites and retweets over time. This trend increased, presumably as the account became more popular. In the chart below, we see an upward trend for both retweets and favorites. There is a more noticeable increase in the number of favorites when compared to retweets as well as several large outliers in favorites for extremely popular tweets.
-
+<!---
 <p align="center">
 <img src="/assets/images/WeRateDogs/retweets_favorites.png" alt="Retweets and favorites over time" style="width: 65%"/>
 </p>
@@ -58,5 +58,5 @@ If we limit our view of the y axis to ignore the outliers and view the bulk of t
 <p align="center">
 <img src="/assets/images/WeRateDogs/ratio_zoom.png" alt="Rating ratio over time zoom" style="width: 65%"/>
 </p>
-
+-->
 In this plot we can see that a few dogs received zero scores, or scores close to zero. We can also see that lower scores are given in general earlier in the dataset. Over time, the scores trended towards higher than a 1:1 ratio with far fewer outliers below 1.
