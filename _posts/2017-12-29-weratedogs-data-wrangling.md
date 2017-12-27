@@ -1,5 +1,4 @@
 ---
-layout: default
 title: WeRateDogs Data Wrangling Project
 categories:
 - python
