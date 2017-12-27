@@ -3,7 +3,7 @@ title: WeRateDogs Data Wrangling Project
 category: python
 tags: data-wrangling
 date: 2017-12-30
-layout: archive
+layout: single
 ---
 
 ## Introduction
