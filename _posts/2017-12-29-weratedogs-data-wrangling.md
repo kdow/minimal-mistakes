@@ -38,18 +38,13 @@ My analysis revolved around the trend in popularity over time of the account, ba
 <p align="center">
 <img src="/assets/images/WeRateDogs/retweets_favorites.png" alt="Retweets and favorites over time" style="width: 85%"/>
 </p>
-<!---
-![Retweets and favorites over time](/assets/images/WeRateDogs/retweets_favorites.png)
--->
 
 The dog ratings are usually a number out of 10, however, there are a fair amount of ratings that use a scale other than 10. In order to normalize the ratings, I created a ratio of the rating numerator divided by the denominator. When this is plotted, we see a few extreme outliers:
 
 <p align="center">
 <img src="/assets/images/WeRateDogs/ratio.png" alt="Rating ratio over time" style="width: 85%"/>
 </p>
-<!---
-![Rating ratio over time](/assets/images/WeRateDogs/ratio.png)
--->
+
 If we take a look at those two tweets, we can see that the ratings were done for comedic effect:
 
 <p align="center">
@@ -59,16 +54,11 @@ If we take a look at those two tweets, we can see that the ratings were done for
 <p align="center">
 <img src="/assets/images/WeRateDogs/tweet2.png" alt="Snoop Dogg tweet" style="width: 85%"/>
 </p>
-<!---
-![Snoop Dogg tweet](/assets/images/WeRateDogs/tweet2.png)
--->
 
 If we limit our view of the y axis to ignore the outliers and view the bulk of the data, we can get a better idea of the rating ratio trend:
 
 <p align="center">
 <img src="/assets/images/WeRateDogs/ratio_zoom.png" alt="Rating ratio over time zoom" style="width: 85%"/>
 </p>
-<!---
-![Rating ratio over time zoom](/assets/images/WeRateDogs/ratio_zoom.png)
--->
+
 In this plot we can see that a few dogs received zero scores, or scores close to zero. We can also see that lower scores are given in general earlier in the dataset. Over time, the scores trended towards higher than a 1:1 ratio with far fewer outliers below 1.
