@@ -9,7 +9,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en"
-title                    : "My Portfolio"
+title                    : "Home"
 title_separator          : "-"
 name                     : "Kelly Downes"
 description              : "My portfolio of data analysis projects."
@@ -85,7 +85,7 @@ analytics:
 author:
   name             : "Kelly Downes"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
+  bio              : #"I am an amazing person."
   location         : "Los Angeles, CA"
   email            :
   uri              :
