@@ -5,6 +5,7 @@ tags: eda
 date: 2018-01-22
 layout: single
 author_profile: true
+toc: true
 ---
 
 # Introduction
@@ -358,7 +359,7 @@ Here is a summary of this dataset:
 
 # Univariate Plots
 
-![](prosperLoanData_files/figure-html/Univariate_Plots1-1.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Univariate_Plots1-1.png" class="align-center" style="width: 75%"/>
 
 In this plot we can see that the majority of loans are current or completed.
 However, it may be useful to view the categories in a different order. I'll
@@ -380,12 +381,12 @@ loans$LoanStatus <- factor(loans$LoanStatus,
 ```
 
 
-![](prosperLoanData_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/unnamed-chunk-2-1.png" class="align-center" style="width: 75%"/>
 
 Now this category is arranged from completed to cancelled loans.
 
 
-![](prosperLoanData_files/figure-html/Univariate_Plots2-1.png)<!-- -->![](prosperLoanData_files/figure-html/Univariate_Plots2-2.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Univariate_Plots2-1.png" class="align-center" style="width: 75%"/><img src="/assets/images/prosperLoanData_files/figure-html/Univariate_Plots2-2.png" class="align-center" style="width: 75%"/>
 
 These two plots show income range and stated monthly income. There are a few
 issues with these plots. The income range variable is out of order and the
@@ -405,7 +406,7 @@ loans$IncomeRange <- factor(loans$IncomeRange,
                                        "$100,000+"))
 ```
 
-![](prosperLoanData_files/figure-html/Univariate_Plots3-1.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Univariate_Plots3-1.png" class="align-center" style="width: 75%"/>
 
 
 ```r
@@ -416,7 +417,7 @@ loans$StatedAnnualIncome <- loans$StatedMonthlyIncome * 12
 qplot(data = loans, x = StatedAnnualIncome)
 ```
 
-![](prosperLoanData_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/unnamed-chunk-4-1.png" class="align-center" style="width: 75%"/>
 
 ```r
 summary(loans$StatedAnnualIncome)
@@ -434,9 +435,9 @@ qplot(data = loans, x = StatedAnnualIncome) +
   scale_x_continuous(lim = c(0, quantile(loans$StatedAnnualIncome, 0.99)))
 ```
 
-![](prosperLoanData_files/figure-html/unnamed-chunk-4-2.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/unnamed-chunk-4-2.png" class="align-center" style="width: 75%"/>
 
-![](prosperLoanData_files/figure-html/Univariate_Plots4-1.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Univariate_Plots4-1.png" class="align-center" style="width: 75%"/>
 
 ```
 ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
@@ -446,7 +447,7 @@ qplot(data = loans, x = StatedAnnualIncome) +
 Here we can see that the shape of orignal loan amount is right skewed, with
 many peaks around roughly $5k intervals.
 
-![](prosperLoanData_files/figure-html/Univariate_Plots5-1.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Univariate_Plots5-1.png" class="align-center" style="width: 75%"/>
 
 Most borrowers are employed in some manner, with full-time employment being the
 largest category. However, there are a few groups that I think would be best
@@ -463,10 +464,10 @@ loans$EmploymentAdjusted<- factor(loans$EmploymentStatus,
 ```
 
 
-![](prosperLoanData_files/figure-html/Univariate_Plots6-1.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Univariate_Plots6-1.png" class="align-center" style="width: 75%"/>
 
 
-![](prosperLoanData_files/figure-html/Univariate_Plots7-1.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Univariate_Plots7-1.png" class="align-center" style="width: 75%"/>
 
 This plot of listing category shows that some categories are much more popular
 than others. However, we would need to reference the variable dictionary to see
@@ -502,7 +503,7 @@ loans$ListingCategory <- cut(loans$ListingCategory..numeric.,
 ## [19] "Taxes"              "Vacation"           "Wedding Loans"
 ```
 
-![](prosperLoanData_files/figure-html/Univariate_Plots8-1.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Univariate_Plots8-1.png" class="align-center" style="width: 75%"/>
 
 This plot shows that debt consolidation is by far the largest category. The next
 two categories are not available, and other. Of the other names categories, the
@@ -527,7 +528,7 @@ just the year, and one that has just the month. I've also created a variable
 that will have just the quarter of the loan, without the year.
 
 
-![](prosperLoanData_files/figure-html/Univariate_Plots9-1.png)<!-- -->![](prosperLoanData_files/figure-html/Univariate_Plots9-2.png)<!-- -->![](prosperLoanData_files/figure-html/Univariate_Plots9-3.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Univariate_Plots9-1.png" class="align-center" style="width: 75%"/><img src="/assets/images/prosperLoanData_files/figure-html/Univariate_Plots9-2.png" class="align-center" style="width: 75%"/><img src="/assets/images/prosperLoanData_files/figure-html/Univariate_Plots9-3.png" class="align-center" style="width: 75%"/>
 
 These three plots show when each loan started, broken down by each year, month,
 and quarter. There are very few loans started in 2005, so it is likely that
@@ -542,7 +543,7 @@ On average, April has the lowest number of loans started, and
 January the highest. The second quarter has the least amount of loans, and the
 fourth quarter the highest.
 
-![](prosperLoanData_files/figure-html/Univariate_Plots10-1.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Univariate_Plots10-1.png" class="align-center" style="width: 75%"/>
 
 In this plot we can see that the number of homeowners is only slighly higher
 than non homeowners.
@@ -569,14 +570,14 @@ variable which breaks up the mean credit scores into categories: Bad - Under
 550, Poor - 550-650, Fair - 650-700, Good - 700-750, and Excellent - 750
 and higher.
 
-![](prosperLoanData_files/figure-html/Univariate_Plots11-1.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Univariate_Plots11-1.png" class="align-center" style="width: 75%"/>
 
 ```
 ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
 ##     9.5   669.5   689.5   695.1   729.5   889.5     591
 ```
 
-![](prosperLoanData_files/figure-html/Univariate_Plots11-2.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Univariate_Plots11-2.png" class="align-center" style="width: 75%"/>
 
 In the first plot we can see that the mean credit score for a small amount of
 borrowers is 0. The rest of the borrowers scores start at 450, with most
@@ -610,7 +611,7 @@ in a logical fashion when graphed.
 
 # Bivariate Plots
 
-![](prosperLoanData_files/figure-html/Bivariate_Plots1-1.png)<!-- -->![](prosperLoanData_files/figure-html/Bivariate_Plots1-2.png)<!-- -->![](prosperLoanData_files/figure-html/Bivariate_Plots1-3.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Bivariate_Plots1-1.png" class="align-center" style="width: 75%"/><img src="/assets/images/prosperLoanData_files/figure-html/Bivariate_Plots1-2.png" class="align-center" style="width: 75%"/><img src="/assets/images/prosperLoanData_files/figure-html/Bivariate_Plots1-3.png" class="align-center" style="width: 75%"/>
 
 In the first plot we can see that the final payment in progress group has a
 slightly higher median stated annual income than the other groups, while the
@@ -625,7 +626,7 @@ In the third plot, there is a slight upward trend for the past due groups, where
 the borrower rate increases. The current and completed groups have similar
 borrower rates.
 
-![](prosperLoanData_files/figure-html/Bivariate_Plots2-1.png)<!-- -->![](prosperLoanData_files/figure-html/Bivariate_Plots2-2.png)<!-- -->![](prosperLoanData_files/figure-html/Bivariate_Plots2-3.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Bivariate_Plots2-1.png" class="align-center" style="width: 75%"/><img src="/assets/images/prosperLoanData_files/figure-html/Bivariate_Plots2-2.png" class="align-center" style="width: 75%"/><img src="/assets/images/prosperLoanData_files/figure-html/Bivariate_Plots2-3.png" class="align-center" style="width: 75%"/>
 
 In these plots we can see that the median borrower rate is highest for cosmetic
 procedures and lowest for personal loans, however the stated annual
@@ -634,21 +635,21 @@ lowest stated annual income, whereas taxes have the highest. The personal loan
 and student use groups have the largest IQR and lowest medians, after the not
 available group.
 
-![](prosperLoanData_files/figure-html/Bivariate_Plots3-1.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Bivariate_Plots3-1.png" class="align-center" style="width: 75%"/>
 
 Although there is a trend of less current delinquencies as credit score
 increases, there is a drop around 600.
 
-![](prosperLoanData_files/figure-html/Bivariate_Plots4-1.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Bivariate_Plots4-1.png" class="align-center" style="width: 75%"/>
 
 The median original loan amount for homeowners is higher, along with the IQR.
 
-![](prosperLoanData_files/figure-html/Bivariate_Plots5-1.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Bivariate_Plots5-1.png" class="align-center" style="width: 75%"/>
 
 In this plot, we can see that the not employed group has a higher credit score
 mean than the groups who earn less than $75k.
 
-![](prosperLoanData_files/figure-html/Bivariate_Plots6-1.png)<!-- -->![](prosperLoanData_files/figure-html/Bivariate_Plots6-2.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Bivariate_Plots6-1.png" class="align-center" style="width: 75%"/><img src="/assets/images/prosperLoanData_files/figure-html/Bivariate_Plots6-2.png" class="align-center" style="width: 75%"/>
 
 In the first plot, we can see that the stated annual income rises slightly each
 year from 2006-2014. The income for 2005 is noticeably higher than the other
@@ -661,7 +662,7 @@ dip in 2008 and 2009 before it starts rising again. As we saw previously, this
 is likely due to the recession. We can also see that it looks like loans were
 limited to \$25,000 until 2013, when the limit rose to \$35,000.
 
-![](prosperLoanData_files/figure-html/Bivariate_Plots7-1.png)<!-- -->![](prosperLoanData_files/figure-html/Bivariate_Plots7-2.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Bivariate_Plots7-1.png" class="align-center" style="width: 75%"/><img src="/assets/images/prosperLoanData_files/figure-html/Bivariate_Plots7-2.png" class="align-center" style="width: 75%"/>
 
 In the first plot, we can see that stated annual income and loan origination
 month are about the same throughout the year.
@@ -670,13 +671,13 @@ In the second plot, we can see that loan amounts are about the same from April
 to August. They start rising in September and are highest in January and
 February.
 
-![](prosperLoanData_files/figure-html/Bivariate_Plots8-1.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Bivariate_Plots8-1.png" class="align-center" style="width: 75%"/>
 
 This plot shows a few noticeable peaks. The excellent credit score group has a
 high amount of borrowers with a low rate around 0.08. The bad credit score group
 has a high peak around 0.29, and a few smaller peaks at 0.24 and 0.35.
 
-![](prosperLoanData_files/figure-html/Bivariate_Plots9-1.png)<!-- -->![](prosperLoanData_files/figure-html/Bivariate_Plots9-2.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Bivariate_Plots9-1.png" class="align-center" style="width: 75%"/><img src="/assets/images/prosperLoanData_files/figure-html/Bivariate_Plots9-2.png" class="align-center" style="width: 75%"/>
 
 These two plots are using a subsetted version of the dataset which only
 includes loans started in 2013. In the first plot we can see that Green Loans
@@ -698,7 +699,7 @@ non-homeowners.
 
 # Multivariate Plots
 
-![](prosperLoanData_files/figure-html/unnamed-chunk-9-1.png)<!-- -->![](prosperLoanData_files/figure-html/unnamed-chunk-9-2.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/unnamed-chunk-9-1.png" class="align-center" style="width: 75%"/><img src="/assets/images/prosperLoanData_files/figure-html/unnamed-chunk-9-2.png" class="align-center" style="width: 75%"/>
 
 In the first plot we can see that the debt consolidation group has the most and
 highest amount of loans. In 2008 and 2009, there are a large number of personal
@@ -725,7 +726,7 @@ pattern, but with a distinct increase in the fourth quarter.
 
 Let's look at just 2013:
 
-![](prosperLoanData_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/unnamed-chunk-10-1.png" class="align-center" style="width: 75%"/>
 
 We can see that a couple of the categories are not present in this plot
 (Personal loan and Student Use), and there are fewer "Not Available", so we can
@@ -737,12 +738,12 @@ throughout the year. Green loans continues its trend of having high loan
 original amounts in the fourth quarter.
 
 
-![](prosperLoanData_files/figure-html/Multivariate_Plots2-1.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Multivariate_Plots2-1.png" class="align-center" style="width: 75%"/>
 
 Overall, it appears homeowners have a lower borrower rate.
 
 
-![](prosperLoanData_files/figure-html/Multivariate_Plots3-1.png)<!-- -->![](prosperLoanData_files/figure-html/Multivariate_Plots3-2.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Multivariate_Plots3-1.png" class="align-center" style="width: 75%"/><img src="/assets/images/prosperLoanData_files/figure-html/Multivariate_Plots3-2.png" class="align-center" style="width: 75%"/>
 
 In the first plot, we can see that homeowners have higher credit scores and
 higher stated annual income. Borrowers with lower incomes and credit scores tend
@@ -760,7 +761,7 @@ income, we see that there is not a linear relationship:
 ```
 
 
-![](prosperLoanData_files/figure-html/Multivariate_Plots4-1.png)<!-- -->![](prosperLoanData_files/figure-html/Multivariate_Plots4-2.png)<!-- -->![](prosperLoanData_files/figure-html/Multivariate_Plots4-3.png)<!-- -->![](prosperLoanData_files/figure-html/Multivariate_Plots4-4.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Multivariate_Plots4-1.png" class="align-center" style="width: 75%"/><img src="/assets/images/prosperLoanData_files/figure-html/Multivariate_Plots4-2.png" class="align-center" style="width: 75%"/><img src="/assets/images/prosperLoanData_files/figure-html/Multivariate_Plots4-3.png" class="align-center" style="width: 75%"/><img src="/assets/images/prosperLoanData_files/figure-html/Multivariate_Plots4-4.png" class="align-center" style="width: 75%"/>
 
 These plots show loan status and stated annual income grouped by credit
 score category and whether or not the borrower is a homeowner. The first two
@@ -782,7 +783,7 @@ Another observation is homeowners with fair credit who defaulted on their loan
 have a relatively high median income.
 
 
-![](prosperLoanData_files/figure-html/Multivariate_Plots5-1.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Multivariate_Plots5-1.png" class="align-center" style="width: 75%"/>
 
 This plot looks at the borrower rate, original loan amount and credit score
 category, broken down by loan status for loans originating in 2013. We can see
@@ -846,7 +847,7 @@ credit scores had many defaulted and chargedoff loans.
 # Final Plots and Summary
 
 ### Plot One
-![](prosperLoanData_files/figure-html/Plot_One-1.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Plot_One-1.png" class="align-center" style="width: 75%"/>
 
 ### Description One
 
@@ -855,7 +856,7 @@ I chose this plot to feature because there is a distinct difference visible
 based on homeownership.
 
 ### Plot Two
-![](prosperLoanData_files/figure-html/Plot_Two-1.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Plot_Two-1.png" class="align-center" style="width: 75%"/>
 
 ### Description Two
 
@@ -868,7 +869,7 @@ amounts differ between categories and quarters.
 
 
 ### Plot Three
-![](prosperLoanData_files/figure-html/Plot_Three-1.png)<!-- -->![](prosperLoanData_files/figure-html/Plot_Three-2.png)<!-- -->
+<img src="/assets/images/prosperLoanData_files/figure-html/Plot_Three-1.png" class="align-center" style="width: 75%"/><img src="/assets/images/prosperLoanData_files/figure-html/Plot_Three-2.png" class="align-center" style="width: 75%"/>
 
 ### Description Three
 
