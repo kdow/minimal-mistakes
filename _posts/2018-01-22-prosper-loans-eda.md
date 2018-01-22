@@ -6,6 +6,7 @@ date: 2018-01-22
 layout: single
 author_profile: true
 toc: true
+toc_depth: 3
 ---
 
 # Introduction
